@@ -44,9 +44,9 @@ jobs:
       - name: Test Clean
         shell: bash
         working-directory: ${{github.workspace}}/source
-        run: |
-            ls
+        run:
             make clean
+            ls
             test ! -f hello.txt
             test ! -f main.o
             test ! -f main.i
