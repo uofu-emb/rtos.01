@@ -22,8 +22,10 @@ jobs:
           path: ${{github.workspace}}/source
 
       - name: Say hello
+        shell: bash
         working-directory: ${{github.workspace}}
         run: |
+            ls
             test ! -f hello.txt
             test ! -f main.o
             test ! -f main.i
